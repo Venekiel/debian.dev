@@ -1,0 +1,13 @@
+DEPENDENCIES
+  apt (~> 7.4.2)
+  docker (~> 10.1.7)
+  git (~> 11.0.1)
+
+GRAPH
+  apt (7.4.2)
+  ark (6.0.4)
+    seven_zip (>= 3.1)
+  docker (10.1.7)
+  git (11.0.1)
+    ark (>= 0.0.0)
+  seven_zip (4.2.2)
