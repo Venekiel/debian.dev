@@ -1,1 +1,1 @@
-{"virtualbox":{"/data":{"guestpath":"/data","hostpath":"C:/Development/Projets","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Development/Vagrant - VMs/Debian11","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/data":{"guestpath":"/data","hostpath":"C:/Development/Projets","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Development/Vagrant - VMs/debian","disabled":false,"__vagrantfile":true}}}
