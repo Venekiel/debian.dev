@@ -84,4 +84,29 @@ Vagrant.configure("2") do |config|
     apt-get install -y git
     apt-get install -y docker-compose
   SHELL
+
+  # Starting-up the project after VM boot-up
+  config.trigger.after :up do |trigger|
+    trigger.name = "Project start-up"
+    trigger.info = "Starting Servlin project..."
+    trigger.run_remote = {
+      inline: <<-SHELL
+        cd /data/Servlin
+        docker-compose up -d
+      SHELL
+    }
+  end
+
+  # Stopping the project after VM halt
+  config.trigger.before :halt do |trigger|
+    trigger.name = "Project stop"
+    trigger.info = "Stopping Servlin project..."
+    trigger.run_remote = {
+      inline: <<-SHELL
+        cd /data/Servlin
+        docker-compose down
+      SHELL
+    }
+  end
+  
 end
